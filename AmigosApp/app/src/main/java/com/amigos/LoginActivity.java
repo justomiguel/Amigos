@@ -182,9 +182,7 @@ public class LoginActivity extends FragmentActivity implements TextureView.Surfa
         }
     }
 
-<<<<<<< HEAD
 
-=======
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -201,5 +199,4 @@ public class LoginActivity extends FragmentActivity implements TextureView.Surfa
         return super.onOptionsItemSelected(item);
 
     }
->>>>>>> FETCH_HEAD
 }
