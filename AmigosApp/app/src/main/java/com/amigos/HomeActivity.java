@@ -3,6 +3,7 @@ package com.amigos;
 import android.app.Activity;
 
 import android.app.ActionBar;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -11,6 +12,7 @@ import android.view.MenuItem;
 import android.support.v4.widget.DrawerLayout;
 
 import com.amigos.fragments.FragmentHome;
+import com.paypal.android.sdk.payments.PayPalService;
 
 
 public class HomeActivity extends FragmentActivity
@@ -110,6 +112,8 @@ public class HomeActivity extends FragmentActivity
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 
 
 }

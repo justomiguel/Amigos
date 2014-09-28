@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.parse.ParseImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/paq_parse_image"
+        android:scaleType="fitXY"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/paq_name"
+        android:textColor="@color/com_facebook_loginview_text_color"
+        android:textSize="20pt"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/paq_parse_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="48dp" />
+
+</RelativeLayout>

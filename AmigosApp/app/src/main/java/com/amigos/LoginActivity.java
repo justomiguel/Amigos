@@ -175,4 +175,6 @@ public class LoginActivity extends Activity implements TextureView.SurfaceTextur
             mediaPlayer = null;
         }
     }
+
+
 }
