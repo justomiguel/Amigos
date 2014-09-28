@@ -1,39 +1,36 @@
 package com.amigos;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.Signature;
 import android.content.res.AssetFileDescriptor;
+import android.graphics.Color;
 import android.graphics.SurfaceTexture;
+import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.util.Base64;
-import android.util.Log;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Surface;
-import android.view.SurfaceHolder;
 import android.view.TextureView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-import android.widget.VideoView;
 
+import com.amigos.adapters.MyPagerAdapterTutorial;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseFacebookUtils;
 import com.parse.ParseUser;
+import com.viewpagerindicator.CirclePageIndicator;
 
 import java.io.IOException;
-
 import java.util.Arrays;
 import java.util.List;
 
 
-public class LoginActivity extends Activity implements TextureView.SurfaceTextureListener {
+public class LoginActivity extends FragmentActivity implements TextureView.SurfaceTextureListener {
 
     private TextureView splashVideo;
     private MediaPlayer mediaPlayer;
@@ -41,15 +38,11 @@ public class LoginActivity extends Activity implements TextureView.SurfaceTextur
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        getActionBar().hide();
+
+        getActionBar().setBackgroundDrawable(new ColorDrawable(Color.argb(0, 0, 0, 0)));
 
         splashVideo = (TextureView)findViewById(R.id.splash_video);
         splashVideo.setSurfaceTextureListener(this);
-
-
-
-
-
 
 
         Button loginButton = (Button)findViewById(R.id.facebook_login);
@@ -66,6 +59,19 @@ public class LoginActivity extends Activity implements TextureView.SurfaceTextur
             startActivity(homeIntent);
             finish();
         }
+
+
+        ViewPager viewPager = (ViewPager) findViewById(R.id.pagerTutorial);
+        MyPagerAdapterTutorial adapterTutorial = new MyPagerAdapterTutorial(getSupportFragmentManager());
+        adapterTutorial.addFragment(FragmentTutorial.newInstance(getString(R.string.tuto1)));
+        adapterTutorial.addFragment(FragmentTutorial.newInstance(getString(R.string.tuto2)));
+        adapterTutorial.addFragment(FragmentTutorial.newInstance(getString(R.string.tuto3)));
+        viewPager.setAdapter(adapterTutorial);
+
+        CirclePageIndicator circlePageIndicator = (CirclePageIndicator) findViewById(R.id.indicator);
+
+        circlePageIndicator.setViewPager(viewPager);
+
     }
 
 
@@ -176,5 +182,24 @@ public class LoginActivity extends Activity implements TextureView.SurfaceTextur
         }
     }
 
+<<<<<<< HEAD
 
+=======
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.my, menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent homeIntent = new Intent(LoginActivity.this,HomeActivity.class);
+        startActivity(homeIntent);
+        finish();
+        return super.onOptionsItemSelected(item);
+
+    }
+>>>>>>> FETCH_HEAD
 }
