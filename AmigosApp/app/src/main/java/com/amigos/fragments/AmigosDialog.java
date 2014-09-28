@@ -89,6 +89,7 @@ public class AmigosDialog extends DialogFragment {
 
             if (confirm != null) {
                 try {
+                    Log.i("paymentExample", confirm.toJSONObject().toString(4));
 
                     Log.i("paymentExample", confirm.toString());
 
@@ -109,6 +110,9 @@ public class AmigosDialog extends DialogFragment {
         }
         else if (resultCode == PaymentActivity.RESULT_EXTRAS_INVALID) {
             Log.i("paymentExample", "An invalid Payment or PayPalConfiguration was submitted. Please see the docs.");
+        }else{
+            Log.i("paymentExample", "ERROR");
+
         }
 
         dismiss();

@@ -10,7 +10,9 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+
+            >
 
             <ImageView
                 android:id="@+id/imageViewPlaces"
@@ -18,6 +20,20 @@
                 android:layout_height="250dp"
                 android:contentDescription="@string/app_name"
                 android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#66000000"
+                android:padding="15dp"
+                android:layout_alignBottom="@+id/imageViewPlaces"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="44dp"
+                android:layout_marginTop="5dp"
+
+                >
 
             <TextView
                 android:id="@+id/places"
@@ -66,7 +82,7 @@
                 android:text="Museo de Antropología"
                 android:textColor="@android:color/white"
                 android:textSize="20sp" />
-
+            </LinearLayout>
 
             <ImageView
                 android:id="@+id/imageViewResta"
@@ -75,6 +91,18 @@
                 android:layout_below="@+id/imageViewPlaces"
                 android:contentDescription="@string/app_name"
                 android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#66000000"
+                android:padding="10dp"
+                android:layout_marginTop="38dp"
+                android:layout_alignTop="@+id/imageViewResta"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
 
             <TextView
                 android:id="@+id/Restantes"
@@ -124,6 +152,7 @@
                 android:textColor="@android:color/white"
                 android:textSize="20sp" />
 
+            </LinearLayout>
 
         </RelativeLayout>
     </ScrollView>
