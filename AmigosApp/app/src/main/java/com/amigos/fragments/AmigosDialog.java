@@ -52,6 +52,7 @@ public class AmigosDialog extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setCancelable(false);
 
         View paymentLayout = getActivity().getLayoutInflater().inflate(R.layout.paypal_payment, null);
 
@@ -61,8 +62,6 @@ public class AmigosDialog extends DialogFragment {
         payButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                dismiss();
 
                 PayPalPayment payment = new PayPalPayment(new BigDecimal("40.00"), "USD", "Kit Services",
                         PayPalPayment.PAYMENT_INTENT_SALE);
@@ -91,14 +90,15 @@ public class AmigosDialog extends DialogFragment {
             if (confirm != null) {
                 try {
 
+                    Log.i("paymentExample", confirm.toString());
+
                     JSONObject jsonObject = (JSONObject) confirm.toJSONObject().get("response");
-
-
                     Log.i("paymentExample", jsonObject.get("state").toString());
 
-
-
-
+                    if (jsonObject.get("state").toString().contains("approved")) {
+                        CorfirmDialog corfirmDialog = CorfirmDialog.newInstance("¡¡¡Gracias!!! \nHemos Registro tu Compra");
+                        corfirmDialog.show(getFragmentManager(), "");
+                    }
                 } catch (JSONException e) {
                     Log.e("paymentExample", "an extremely unlikely failure occurred: ", e);
                 }
@@ -111,6 +111,7 @@ public class AmigosDialog extends DialogFragment {
             Log.i("paymentExample", "An invalid Payment or PayPalConfiguration was submitted. Please see the docs.");
         }
 
+        dismiss();
     }
 
     private void startPayPalService(){

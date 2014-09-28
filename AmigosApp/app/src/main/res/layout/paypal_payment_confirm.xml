@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/cofirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textViewCorfirm"
+        android:background="@drawable/com_facebook_button_blue"
+        android:text="Aceptar"
+        android:textColor="@color/com_facebook_loginview_text_color"
+        android:textSize="10pt"
+        android:textStyle="bold" />
+
+
+    <ImageView
+        android:id="@+id/imageViewIcon"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_launcher"
+        android:contentDescription="@string/app_name"/>
+
+
+    <TextView
+        android:layout_below="@+id/imageViewIcon"
+        android:id="@+id/textViewCorfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/com_facebook_blue"
+        android:textStyle="bold" />
+
+</RelativeLayout>
+

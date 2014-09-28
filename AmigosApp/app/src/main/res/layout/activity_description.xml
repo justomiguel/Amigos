@@ -83,7 +83,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/imageViewPlaces"
                 android:layout_margin="16dp"
-                android:text="Lugares: "
+                android:text="Restaurantes: "
                 android:textColor="@android:color/white"
                 android:textSize="26sp"
                 android:textStyle="bold" />

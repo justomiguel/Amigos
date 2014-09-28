@@ -12,14 +12,14 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
     <string name="title_activity_description">Descripción</string>
-    <string name="home">Home</string>
+    <string name="home">Inicio</string>
     <string name="perfil">Perfil</string>
-    <string name="settings">Settings</string>
+    <string name="settings">Configuración</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="facebook_id">1464687687153222</string>
     <string name="parse_app_id">vbBMsu17JgSE7krytApGnVlUobPkz6xfrDi28PMn</string>
     <string name="parse_client_key">y2rV0yPNkgBgjCilZHCQUXiLilTSiC6V1zVSupG4</string>
-    <string name="custom">Custom</string>
+    <string name="custom">Paquetes</string>
     <string name="personal">Personal</string>
     <string name="paypal_client_id">ATGcYxBTGz_zVRx4hQOEXWyu9r3_piWFoa4bebli-oufXdzsSq8KGtc7Vddu
 </string>
