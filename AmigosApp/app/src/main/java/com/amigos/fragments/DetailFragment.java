@@ -16,14 +16,11 @@ import com.paypal.android.sdk.payments.PayPalService;
 public class DetailFragment extends Fragment {
 
 
-    private static PayPalConfiguration payPalConfiguration = new PayPalConfiguration().environment(PayPalConfiguration.ENVIRONMENT_NO_NETWORK)
-            .clientId("ATGcYxBTGz_zVRx4hQOEXWyu9r3_piWFoa4bebli-oufXdzsSq8KGtc7Vddu");
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        startPayPalService();
 
     }
 
@@ -40,11 +37,6 @@ public class DetailFragment extends Fragment {
     }
 
 
-    private void startPayPalService(){
-        Intent intentServicePayPal = new Intent(getActivity(), PayPalService.class);
-        intentServicePayPal.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION,payPalConfiguration);
-        getActivity().startService(intentServicePayPal);
-    }
 
     @Override
     public void onStop() {
