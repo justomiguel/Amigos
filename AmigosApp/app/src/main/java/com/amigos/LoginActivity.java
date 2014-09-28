@@ -19,6 +19,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.amigos.adapters.MyPagerAdapterTutorial;
+import com.amigos.fragments.FragmentTutorial;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseFacebookUtils;
@@ -182,9 +183,6 @@ public class LoginActivity extends FragmentActivity implements TextureView.Surfa
         }
     }
 
-<<<<<<< HEAD
-
-=======
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -201,5 +199,4 @@ public class LoginActivity extends FragmentActivity implements TextureView.Surfa
         return super.onOptionsItemSelected(item);
 
     }
->>>>>>> FETCH_HEAD
 }

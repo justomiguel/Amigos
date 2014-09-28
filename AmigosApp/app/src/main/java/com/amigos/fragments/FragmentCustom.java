@@ -1,5 +1,6 @@
 package com.amigos.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.amigos.DescriptionActivity;
 import com.amigos.R;
 import com.amigos.adapters.ParseAdapter;
 
@@ -41,6 +43,9 @@ public class FragmentCustom extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent intent = new Intent(getActivity(), DescriptionActivity.class);
+                startActivity(intent);
 
             }
         });

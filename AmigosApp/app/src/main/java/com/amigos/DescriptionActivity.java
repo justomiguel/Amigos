@@ -1,9 +1,15 @@
 package com.amigos;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class DescriptionActivity extends Activity {
@@ -12,13 +18,40 @@ public class DescriptionActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_description);
+
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+
+        ImageView imageView = (ImageView) findViewById(R.id.imageViewPlaces);
+        imageView.setBackgroundResource(R.drawable.frame_animation);
+        AnimationDrawable animationDrawable = (AnimationDrawable) imageView.getBackground();
+        animationDrawable.start();
+
+        ImageView imageViewRes = (ImageView) findViewById(R.id.imageViewResta);
+        imageViewRes.setBackgroundResource(R.drawable.frame_animation_resta);
+        final AnimationDrawable animationDrawableResta = (AnimationDrawable) imageViewRes.getBackground();
+
+
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                animationDrawableResta.start();
+            }
+        }, 1500);
+
+
+
+
+//        ImageView imageView = (ImageView) findViewById(R.id.imageViewPlaces);
+
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.description, menu);
+//        getMenuInflater().inflate(R.menu.description, menu);
         return true;
     }
 
@@ -28,9 +61,17 @@ public class DescriptionActivity extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
+
+        switch (id)
+        {
+            case R.id.action_settings:
+                break;
+            case android.R.id.home:
+                finish();
+                break;
+
         }
+
         return super.onOptionsItemSelected(item);
     }
 }
