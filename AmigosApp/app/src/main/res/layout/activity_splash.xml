@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MyActivity">
 
    <TextureView
@@ -9,10 +10,11 @@
        android:layout_height="match_parent"
        android:id="@+id/splash_video"
        />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Facebook Login"
+        android:text="Inicia sesión"
         android:id="@+id/facebook_login"
         android:textColor="@color/com_facebook_loginview_text_color"
         android:background="@drawable/com_facebook_button_blue"
@@ -21,6 +23,32 @@
         android:layout_alignStart="@+id/splash_video"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pagerDetailImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="240dp"
+        android:layout_above="@+id/indicator"
+        android:layout_alignLeft="@+id/splash_video"
+        android:layout_alignStart="@+id/splash_video"
+        >
+
+        </android.support.v4.view.ViewPager>
+
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+
+        app:pageColor="@color/com_facebook_loginview_text_color"
+        app:radius="5dp"
+        app:strokeWidth="0dp"
+        android:layout_above="@+id/facebook_login"
+        android:layout_alignLeft="@+id/splash_video"
+        android:layout_alignStart="@+id/splash_video" />
 
 
 

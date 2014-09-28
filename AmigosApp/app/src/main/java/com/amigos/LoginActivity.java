@@ -27,12 +27,8 @@ import com.parse.ParseException;
 import com.parse.ParseFacebookUtils;
 import com.parse.ParseUser;
 
-<<<<<<< HEAD
 import java.io.IOException;
-=======
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
->>>>>>> FETCH_HEAD
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -47,7 +43,6 @@ public class LoginActivity extends Activity implements TextureView.SurfaceTextur
         setContentView(R.layout.activity_splash);
         getActionBar().hide();
 
-<<<<<<< HEAD
         splashVideo = (TextureView)findViewById(R.id.splash_video);
         splashVideo.setSurfaceTextureListener(this);
 
@@ -56,8 +51,6 @@ public class LoginActivity extends Activity implements TextureView.SurfaceTextur
 
 
 
-=======
->>>>>>> FETCH_HEAD
 
         Button loginButton = (Button)findViewById(R.id.facebook_login);
         loginButton.setOnClickListener(new View.OnClickListener() {
