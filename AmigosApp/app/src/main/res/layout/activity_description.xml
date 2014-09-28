@@ -1,16 +1,142 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.amigos.DescriptionActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:text="@string/hello_world"
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/butttonOk">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewPlaces"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/places"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="16dp"
+                android:text="Lugares: "
+                android:textColor="@android:color/white"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/place_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/places"
+                android:layout_marginLeft="16dp"
+                android:text="Bellas Artes"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/place_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/place_1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Zocalo"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/place_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/place_2"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Museo de Antropología"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+
+            <ImageView
+                android:id="@+id/imageViewResta"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@+id/imageViewPlaces"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/Restantes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/imageViewPlaces"
+                android:layout_margin="16dp"
+                android:text="Lugares: "
+                android:textColor="@android:color/white"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/resta_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/Restantes"
+                android:layout_marginLeft="16dp"
+                android:text="Barro negro"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/resta_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/resta_1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Pizza del Perro Negro"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/resta_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/resta_2"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Limosneros"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/butttonOk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/com_facebook_button_blue"
+        android:padding="8dp"
+        android:text="Aceptar"
+        android:textColor="@color/com_facebook_loginview_text_color" />
+
 
 </RelativeLayout>
