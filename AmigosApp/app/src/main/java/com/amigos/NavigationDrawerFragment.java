@@ -22,6 +22,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.amigos.adapters.MyAdapterDrawer;
+import com.amigos.util.ItemDrawer;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.
  * See the <a href="https://developer.android.com/design/patterns/navigation-drawer.html#Interaction">
@@ -97,15 +103,30 @@ public class NavigationDrawerFragment extends Fragment {
                 selectItem(position);
             }
         });
-        mDrawerListView.setAdapter(new ArrayAdapter<String>(
-                getActionBar().getThemedContext(),
-                android.R.layout.simple_list_item_activated_1,
-                android.R.id.text1,
-                new String[]{
-                        getString(R.string.home),
-                        getString(R.string.perfil),
-                        getString(R.string.settings),
-                }));
+
+
+        List<ItemDrawer> list = new ArrayList<ItemDrawer>();
+        list.add(new ItemDrawer(getString(R.string.home),R.drawable.ic_action_web_site));
+        list.add(new ItemDrawer(getString(R.string.perfil),R.drawable.ic_action_person));
+        list.add(new ItemDrawer(getString(R.string.settings),R.drawable.ic_action_settings));
+
+
+        MyAdapterDrawer myAdapterDrawer = new MyAdapterDrawer(list, getActivity());
+
+//        mDrawerListView.setAdapter(new ArrayAdapter<String>(
+//                getActionBar().getThemedContext(),
+//                android.R.layout.simple_list_item_activated_1,
+//                android.R.id.text1,
+//                new String[]{
+//                        getString(R.string.home),
+//                        getString(R.string.perfil),
+//                        getString(R.string.settings),
+//                }));
+
+        mDrawerListView.setAdapter(myAdapterDrawer);
+
+
+
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;
     }
