@@ -11,7 +11,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
-    <string name="title_activity_description">DescriptionActivity</string>
+    <string name="title_activity_description">Descripción</string>
     <string name="home">Home</string>
     <string name="perfil">Perfil</string>
     <string name="settings">Settings</string>
@@ -26,4 +26,6 @@
     <string name="tuto1">Crea tu perfil con facebook, Twitter o tu correo.</string>
     <string name="tuto2">Planea tu viaje con alguna de nuestras rutas recomendadas o crea la tuya.</string>
     <string name="tuto3">Nosotros encontraremos un residente para que conozcas.\nBuen Viaje.</string>
+    <string name="title_activity_activity_perfil">ActivityPerfil</string>
+
 </resources>
